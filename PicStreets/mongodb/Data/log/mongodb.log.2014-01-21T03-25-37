@@ -1,0 +1,31 @@
+Mon Jan 20 09:50:08 
+Mon Jan 20 09:50:08 warning: 32-bit servers don't have journaling enabled by default. Please use --journal if you want durability.
+Mon Jan 20 09:50:08 
+Mon Jan 20 09:50:08 [initandlisten] MongoDB starting : pid=4604 port=27017 dbpath=f:\express\mongodb\data\db 32-bit host=207161-PC
+Mon Jan 20 09:50:08 [initandlisten] 
+Mon Jan 20 09:50:08 [initandlisten] ** NOTE: when using MongoDB 32 bit, you are limited to about 2 gigabytes of data
+Mon Jan 20 09:50:08 [initandlisten] **       see http://blog.mongodb.org/post/137788967/32-bit-limitations
+Mon Jan 20 09:50:08 [initandlisten] **       with --journal, the limit is lower
+Mon Jan 20 09:50:08 [initandlisten] 
+Mon Jan 20 09:50:08 [initandlisten] db version v2.2.7, pdfile version 4.5
+Mon Jan 20 09:50:08 [initandlisten] git version: 6c2023ca359ed31407d999edcbe8cd7bd1d433b3
+Mon Jan 20 09:50:08 [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=0, build=6002, platform=2, service_pack='Service Pack 2') BOOST_LIB_VERSION=1_49
+Mon Jan 20 09:50:08 [initandlisten] options: { dbpath: "f:\express\mongodb\data\db", logpath: "f:\express\mongodb\data\log\mongodb.log" }
+Mon Jan 20 09:50:08 [initandlisten] Unable to check for journal files due to: boost::filesystem::basic_directory_iterator constructor: 系统找不到指定的路径。: "f:\express\mongodb\data\db\journal"
+Mon Jan 20 09:50:08 [initandlisten] waiting for connections on port 27017
+Mon Jan 20 09:50:08 [websvr] admin web console waiting for connections on port 28017
+Mon Jan 20 09:50:23 [initandlisten] connection accepted from 127.0.0.1:50046 #4 (1 connection now open)
+Mon Jan 20 17:22:05 CTRL_CLOSE_EVENT signal
+Mon Jan 20 17:22:05 [consoleTerminate] got CTRL_CLOSE_EVENT, will terminate after current cmd ends
+Mon Jan 20 17:22:05 [consoleTerminate] now exiting
+Mon Jan 20 17:22:05 dbexit: 
+Mon Jan 20 17:22:05 [consoleTerminate] shutdown: going to close listening sockets...
+Mon Jan 20 17:22:05 [consoleTerminate] closing listening socket: 484
+Mon Jan 20 17:22:05 [consoleTerminate] closing listening socket: 488
+Mon Jan 20 17:22:05 [consoleTerminate] shutdown: going to flush diaglog...
+Mon Jan 20 17:22:05 [consoleTerminate] shutdown: going to close sockets...
+Mon Jan 20 17:22:05 [consoleTerminate] shutdown: waiting for fs preallocator...
+Mon Jan 20 17:22:05 [consoleTerminate] shutdown: closing all files...
+Mon Jan 20 17:22:05 [consoleTerminate] closeAllFiles() finished
+Mon Jan 20 17:22:05 [consoleTerminate] shutdown: removing fs lock...
+Mon Jan 20 17:22:05 dbexit: really exiting now
