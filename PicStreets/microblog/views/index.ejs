@@ -2,61 +2,83 @@
 <html>
   <head>
     <title><%= title %></title>
-    <!-- 最新 Bootstrap 核心 CSS 文件 -->
-	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+     
+<!-- 最新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
 
-	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
-	<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap-theme.min.css">
 
-	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-	<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 
-	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-	<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
-    <style type="text/css">
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+ <link rel='stylesheet' href='/stylesheets/reg.css' /> 
+ <style type="text/css">
+      body{
+      -moz-user-select: none; /*火狐*/
+      -webkit-user-select: none;  /*webkit浏览器*/
+      -ms-user-select: none;   /*IE10*/
+      -khtml-user-select: none; /*早期浏览器*/
+      user-select: none;
+      }
     	body{
     		padding-top: 60px;
     		padding-bottom: 40px;
     	}
     </style>
   </head>
-  <body>
+  <body youdao="bind">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
+            <span class="sr-only">Tro</span>
+            <span class="
+            icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Sharing Nodes</a>
+          <a class="navbar-brand" href="#">图片分享站</a>
         </div>
-        <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="用户名" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="密码" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">登陆</button>
-            <button type="submit" class="btn btn-success">注册</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+        <div class="navbar-collapse collapse"> 
+        <ul class="nav navbar-nav navbar-right">
+        <% if(state=='nologin'){ %>
+        <li class="active"><a href="#"  data-toggle="modal" data-target="#myModal">登录与注册</a></li>  
+        <% }else{%>
+        <li ><a  href='/main'>个人主页</a></li>
+        <li class="active"><a  href="/logout">退出</a></li>
+        <% } %>
+        </ul>
+        </div>
       </div>
     </div>
-
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>欢迎来到 SN</h1>
-        <p>SN 是一个基于 Node.js 的日记分享系统。</p>
+
       </div>
     </div>
 
-    <div id="container" class="container">
+<div id="container" class="container">
+<div class="row">
+<div class="col-md-4">
+<h2>Bootstrap</h2>
+<p>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</p>
+<p><a class="btn btn-default" role="button">更多信息 &raquo;</a></p>
+</div>
+<div class="col-md-4">
+<h2>Node.js</h2>
+<p>Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.</p>
+<p><a class="btn btn-default" role="button">更多信息 &raquo;</a></p>
+</div>
+<div class="col-md-4">
+<h2>北极圈</h2>
+<p>北极圈是指纬度数值为北纬66.5°的一个假想圈，是北寒带与北温带的分界线，与黄赤交角（南北回归线所在的纬度数值）余角。北极圈以北的地区被称为“北极圈内”。通常，北极圈内的地区被叫做北极地区，由北冰洋以及周边陆地组成，其陆地部分包括了格陵兰、北欧三国、俄罗斯北部、美国阿拉斯加北部以及加拿大北部。北极圈内岛屿很多，最大的是格陵 兰岛。由于严寒，北极圈以内的生物种类很少。植物以地衣、苔藓为主，动物有北极熊、海豹、鲸等。</p>
+<p><a class="btn btn-default" role="button">更多信息 &raquo;</a></p>
+</div>
+</div>
 <div class="row">
 <div class="col-md-4">
 <h2>Bootstrap</h2>
@@ -74,10 +96,65 @@
 <p><a class="btn btn-default" role="button">更多信息 &raquo;</a></p>
 </div>
 </div>
-    <hr />
-    <footer>
-    <p><a href="" target="_blank">By 承影随风</a> 2012</p>
-    </footer>
-    </div>
-  </body>
+<div class="row">
+<div class="col-md-4">
+<h2>Bootstrap</h2>
+<p>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</p>
+<p><a class="btn btn-default" role="button">更多信息 &raquo;</a></p>
+</div>
+<div class="col-md-4">
+<h2>Node.js</h2>
+<p>Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.</p>
+<p><a class="btn btn-default" role="button">更多信息 &raquo;</a></p>
+</div>
+<div class="col-md-4">
+<h2>北极圈</h2>
+<p>北极圈是指纬度数值为北纬66.5°的一个假想圈，是北寒带与北温带的分界线，与黄赤交角（南北回归线所在的纬度数值）余角。北极圈以北的地区被称为“北极圈内”。通常，北极圈内的地区被叫做北极地区，由北冰洋以及周边陆地组成，其陆地部分包括了格陵兰、北欧三国、俄罗斯北部、美国阿拉斯加北部以及加拿大北部。北极圈内岛屿很多，最大的是格陵兰岛。由于严寒，北极圈以内的生物种类很少。植物以地衣、苔藓为主，动物有北极熊、海豹、鲸等。</p>
+<p><a class="btn btn-default" role="button">更多信息 &raquo;</a></p>
+</div>
+</div>
+<hr />
+<footer>
+<p><a href="" target="_blank">By 承影随风</a>2012</p>
+</footer>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel"><h3 class="form-signin-heading">登录与注册</h3></h4>
+      </div>
+      <div class="modal-body">
+      <form class="form-signin" role="form" id="form1" action="login" method="post">
+        <div class="form-group">
+        <input type="text" id="username" name="username" class="form-control" placeholder="请输入用户名" required autofocus value="<%=username%>">
+        </div>       
+        <div class="form-group">
+        <input type="password" id="password" name="password" class="form-control" placeholder="请输入密码" required autofocus value="<%=pwd%>">
+        </div>
+        <div class="form-group">
+        <label class="checkbox">
+          <% if(pwd!=""){%>
+          <input type="checkbox" id="remember" name="remember" value="remember" checked="checked">记住密码
+          <%}else{%>
+          <input type="checkbox" id="remember" name="remember" value="remember">记住密码
+          <%}%>
+        </label>
+        </div>
+        <div class="form-group">
+        <button  type="submit" class="btn btn-lg btn-success btn-block">登录</button>
+        </div>
+        <div class="form-group">
+        <a href="/reg" target="_blank" class="btn btn-lg btn-default btn-block">注册</a>
+        </div>
+      </form>
+      </div>
+       <div class="modal-footer">
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+
 </html>

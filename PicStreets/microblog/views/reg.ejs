@@ -1,0 +1,108 @@
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%= title %></title>
+<!-- 最新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+ <link rel='stylesheet' href='/stylesheets/reg.css' /> 
+  </head>
+<script type="text/javascript">
+jQuery(function(){
+      jQuery('#regbutton').click(function(e){
+        var username= jQuery("#regusername").val();
+        var password = jQuery('#regpassword').val();
+        var passwordrepeat=jQuery('#regpasswordrepeat').val();
+        var email=jQuery('#regemail').val();
+        var valiEmail =/^[_a-z0-9]+@([_a-z0-9]+\.)+[a-z0-9]{2,3}$/;
+        if(username.trim()==""){
+          alert("用户名不能为空!");
+          jQuery("#regusername").focus();
+        }else if(password.trim()==""){
+          alert("密码不能为空!");
+          jQuery("#regpassword").focus();
+        }else if(passwordrepeat.trim()==""){
+          alert("确认密码不能为空!");
+          jQuery("#regpasswordrepeat").focus();
+        }else if(email.trim()==""){
+          alert("邮箱不能为空!");
+          jQuery("#regemail").focus();
+        }else if(password!=passwordrepeat){
+          alert("两次输入的密码不一致,请重新输入!");
+          jQuery('#regpassword').val("");
+          jQuery('#regpasswordrepeat').val("");
+          jQuery("#regpassword").focus();
+        }else if(!valiEmail.test(email)){
+          alert("邮箱格式错误!");
+          jQuery('#regemail').val("");
+          jQuery("#regemail").focus();
+        }else{
+          var data={};
+          data.username=username;
+          data.password=password;
+          data.email=email;
+          jQuery.ajax({
+            type:'POST',
+            data:JSON.stringify(data),
+            contentType:'application/json',
+            url:'reg',
+            success:function(data){
+              jQuery('#regpassword').val("");
+              jQuery('#regpasswordrepeat').val("");
+              if(data=='success'){
+                alert('注册成功!');
+                window.close();
+              }else if(data=='named'){
+                alert('用户名已经被占用!');
+                jQuery('#regusername').val("");
+              }else{
+                alert('注册失败!');
+                jQuery('#regusername').val("");
+                jQuery('#regemail').val("");
+              }
+            }
+          });
+        }
+      });
+    });
+</script>
+  <body>
+
+    <div class="container">
+      <form class="form-signin" role="form">
+        <div class="form-group">
+        <h2 class="form-signin-heading">请注册</h2>
+        </div>
+        <div class="form-group">
+        <input type="text" id="regusername" name="regusername" class="form-control" placeholder="用户名" required autofocus >
+        </div>
+        <div class="form-group">
+        <input type="password" id="regpassword" name="regpassword" class="form-control" placeholder="密码" required autofocus>
+        </div>
+        <div class="form-group">
+        <input type="password" id="regpasswordrepeat" name = "regpasswordrepeat" class="form-control" placeholder="确认密码" required autofocus>
+        </div>
+        <div class="form-group">
+        <input type="text" id="regemail" name="regemail" class="form-control" placeholder="邮箱" required autofocus>
+        </div>
+        <div class="form-group">
+        <button id="regbutton" class="btn btn-lg btn-primary btn-block" type="button">注册</button>
+        </div>
+      </form>
+
+    </div> 
+  </body>
+</html>
