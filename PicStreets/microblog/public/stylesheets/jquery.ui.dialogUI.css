@@ -1,0 +1,63 @@
+﻿.ui-widget-header .check-ok { position:absolute; top:4px; right:50px; color:#FFF; line-height:24px; font-weight: normal; }
+/*jquery-ui.css (第 62 行)*/
+.ui-widget-content { font-family:"微软雅黑", "宋体", Arial, Helvetica, sans-serif; background: none repeat scroll 0 0 #FFF; border:2px solid #0698E9; color:inherit; }
+/*jquery-ui.css (第 64 行)*/
+.ui-widget-header { background:#0698E9; color:#FFF; border: 0 none; /*border-bottom: 1px solid #FF9900;*/ height: 30px; }
+.ui-dialog .ui-widget-header { background-position: 0px -110px; }
+/*jquery-ui.css (第 291 行)*/
+.ui-corner-all { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 3px 3px 3px 3px; }
+/*jquery-ui.css (第 294 行)*/
+.ui-widget-overlay { background: none repeat scroll 0 0 #000; }
+/*jquery-ui.css (第 442 行)*/
+.ui-dialog { padding: 0px 0 0/*0.1em 0 0;*/ }
+/*jquery-ui.css (第 443 行)*/
+.ui-dialog .ui-dialog-titlebar { padding: 0 0 0 0; border-radius: 0px 0px 0px 0px; }
+/*jquery-ui.css (第 444 行)*/
+.ui-dialog .ui-dialog-title { color: #FFF; font-size: 14px; height: 24px; line-height: 28px; margin: 0; text-indent: 15px; }
+/*jquery-ui.css (第 448 行)*/
+.ui-dialog .ui-dialog-content { padding: 0px/*0.2em 0.6em;*/ }
+.ui-dialog-extend { border: 1px solid #FF9900; padding: 0; }
+.ui-dialog-extend .ui-dialog-content { padding: 0; }
+.ui-dialog-titlebar { text-transform:capitalize; }
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year { width:40%; height:20px; }
+.ui-dialog .ui-dialog-buttonpane { background:#F6F6F6; border-top: 1px solid #E6E6E6; clear:both; margin: 0.5em 0 0; padding: 0.1em 0.5em 0.3em 0.4em; text-align: center; }
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {/*float:left; position:relative; left:50%;*/ }
+.ui-dialog .ui-dialog-buttonpane button { cursor: pointer; margin: 0.3em 0.4em 0.2em 0; }
+.ui-button { display: inline-block; margin-right: 0.1em; overflow: visible; padding: 0; border-radius:3px 3px 3px 3px;/*position: relative; right:50%;
+   float:left;
+  text-decoration: none !important;*/ }
+/*button text element */
+.ui-dialog .ui-dialog-buttonpane button{ background:url(../images/button_com.png) no-repeat 0px -447px; border:none; display:inline-block;*width:70px; height:27px;}
+.ui-dialog .ui-dialog-buttonpane button span{ background:url(../images/button_com.png) no-repeat right  -477px; *background-position:right  -477px; color:#000; }
+.ui-button .ui-button-text { display: block; line-height: 1.2; }
+.ui-button-text-only .ui-button-text { padding: .3em 1em; padding: .3em 1em !important; }
+/*jquery-ui.css (第 450 行)*/
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float:none; }
+/*jquery-ui.css (第 94 行)*/
+/*.ui-icon-closethick { background-image: url("../images/prompt-div.png"); }
+.ui-icon-closethick { background-position:0px -30px; }
+.ui-widget-header .ui-icon { background-image: url("../images/prompt-div.png"); }
+.ui-dialog .ui-state-hover .ui-icon, .ui-dialog .ui-state-focus .ui-icon { background-image: url("../images/prompt-div.png"); background-position:0px 0px; border:0px solid #CCC; background-color:transparent; }*/
+.ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-header .ui-state-focus { border:none; background:transparent }
+.ui-widget-content .operate_tip a { color: #06C; }
+.ui-dialog-content .table-caption li, .ui-dialog-content .table-caption li span { background:none; }
+.ui-dialog-content .table-caption { border-bottom:2px solid #EE8E55 }
+.ui-dialog-content .table-caption li span { color:#DE4A0C }
+/*左侧菜单*/
+.ui-accordion .ui-accordion-header { cursor: pointer; margin-top: 1px; position: relative; }
+/*.ui-corner-all { border-radius: 0px; }*/
+.ui-corner-top { border-top-left-radius: 0px; border-top-right-radius: 0px; }
+
+/*jquery-ui.css (第 487 行)*/
+.ui-tabs .ui-tabs-nav li,.ui-tabs .ui-tabs-nav li a,.ui-tabs .ui-tabs-nav li.ui-tabs-selected,.ui-tabs .ui-tabs-nav li.ui-tabs-selected a{background:url(../images/tab_bg_on.png) no-repeat;}
+.ui-tabs { position: relative; padding:0; margin:0px; zoom: 1; border:none } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs .ui-tabs-nav { margin: 0; padding:0; background:none; border-bottom:1px solid #3193e7; clear:both; height:28px; }
+.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap;background-position:0px -73px; text-align:center; line-height:27px; cursor:pointer; height:27px;}
+.ui-tabs .ui-tabs-nav li a { float: left; text-decoration:none;  background-position:right -119px; min-width:60px; padding:0px 12px 0px 15px;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; color:#FFF; font-weight:bold; font-size:14px; text-align:center; background-position:0px 0px; height:27px;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; color:#FFF; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a{background-position:right -28px;}
+.ui-tabs .ui-tabs-panel { display: block; border-width: 0; margin:0; padding: 0em; background: none; }
+.ui-tabs .ui-tabs-hide { display: none !important; }
+.ui-widget-content a.blue {color: #04C;}
